@@ -12,6 +12,17 @@ Variables
 */
 
 :root {
+  --orange: #f66a0a;
+  --green: #28a745;
+  --blue: #0070f3;
+  --lightblue: #79b8ff;
+  --lightestBlue: #c8e1ff;
+  --offWhite: #f6f8fa;
+  --grey: #6a737d;
+  --grey2: #586069;
+  --black: #1A1E22;
+  --darkGrey: #24292e;
+  --white: #FFFFFF;
   /* dark shades of primary color*/
   --clr-primary-1: hsl(185, 91%, 17%);
   --clr-primary-2: hsl(185, 84%, 25%);
@@ -68,7 +79,7 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
+  background : var(--offWhite);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -181,3 +192,4 @@ p {
 main {
   padding-bottom: 2rem;
 }
+
