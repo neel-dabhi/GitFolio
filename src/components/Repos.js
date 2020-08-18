@@ -73,12 +73,11 @@ const Wrapper = styled.div`
   }
   
   div {
-    border: 1.5px solid var(--accent);
+    border: 0px solid var(--accent);
     border-radius: var(--radius);
     width: 100% !important;
   }
   .fusioncharts-container {
-     
     width: 100% !important;
   }
   svg {

@@ -45,11 +45,11 @@ const Wrapper = styled.article`
     column-gap: 1rem;
     margin-bottom: 1rem;
     img {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       margin-right: 0.8rem;
-      border-radius: var(--radius);
-      border: 1.5px solid var(--accent);
+      border-radius: 50%;
+      border: 0px solid var(--accent);
     }
     h2 {
       color: var(--white);

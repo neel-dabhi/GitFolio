@@ -1,18 +1,32 @@
 import React from 'react';
-import { Info, Repos, User, Search, Navbar } from '../components';
-import loadingImage from '../images/preloader.gif';
-import { GithubContext } from '../context/context';
-const Dashboard = () => {
-  return (
-    <main>
-        {/* <Navbar></Navbar> */}
-        <Search></Search>
-        <User></User>
-        <Info></Info>
-        <Repos></Repos>
+import {Info, Repos, User, Search, Navbar, ProgressBar, Corner} from '../components';
+import {GithubContext} from '../context/context';
 
-    </main>
-  );
+
+const Dashboard = () => {
+    const {isLoading} = React.useContext(GithubContext);
+
+    if (isLoading) {
+        return <main>
+            {/*<Navbar></Navbar>*/}
+            <ProgressBar/>
+            <Search></Search>
+            <Corner/>
+            <User></User>
+            <Info></Info>
+            <Repos></Repos>
+        </main>
+    }
+    return (
+        <main>
+            {/*<Navbar></Navbar>*/}
+            <Search></Search>
+            <Corner/>
+            <User></User>
+            <Info></Info>
+            <Repos></Repos>
+        </main>
+    );
 };
 
 export default Dashboard;

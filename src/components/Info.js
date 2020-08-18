@@ -71,7 +71,7 @@ const Wrapper = styled.section`
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
   .item {
-    border: 1.5px solid var(--accent);
+    border: 0px solid var(--accent);
     border-radius: var(--radius);
     padding: 1rem 2rem;
     background: var(--cardSurface);

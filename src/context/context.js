@@ -14,26 +14,47 @@ const GithubProvider = ({ children }) => {
     const [repos, setRepos] = useState(mockRepos);
     const [followers, setFollowers] = useState(mockFollowers);
     const [requests, setRequests] = useState(0);
-    const [loading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState({show: false, message: ""});
     // check rate lim
 
-    const checRequests = () => {
+    const searchGithubUser = async (user) => {
+        toggleError(false, "");
+        setIsLoading(true);
+        const response = await axios(`${rootUrl}/users/${user}`).catch(err => console.log(err));
+        console.log(response);
+        if (response) {
+            setGithubUser(response.data);
+        } else {
+            toggleError(true, "No user found");
+        }
+        checkRequests();
+        setIsLoading(false);
+    }
+
+    const checkRequests = () => {
         axios(`${rootUrl}/rate_limit`)
             .then(({data}) => {
                 let {
                     rate: {remaining},
                 } = data;
+                // remaining = 0;
                 setRequests(remaining);
                 if (remaining === 0) {
-                    //throw err
+                    toggleError(true, "You have Exceeded hourly quota");
                 }
             })
             .catch((error) => console.log(error));
-    }
+    };
 
-    useEffect(checRequests, []);
+    function toggleError(show = false, msg = '') {
+        setError({show, msg});
+    };
 
-    return (<GithubContext.Provider value={{githubUser, repos, followers, requests}}>
+    useEffect(checkRequests, []);
+
+    return (
+        <GithubContext.Provider value={{githubUser, repos, followers, requests, error, searchGithubUser, isLoading}}>
             {children}
         </GithubContext.Provider>
     );
