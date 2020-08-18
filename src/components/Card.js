@@ -18,7 +18,7 @@ const Card = () => {
           <a target="_blank" href={`${html_url}`}>@{login}</a>
         </p>
         <p className="bio">
-          {bio}
+          {bio || "Bio Not Available"}
         </p>
       </div>
     </header>
@@ -31,7 +31,7 @@ const Card = () => {
         <MdLocationOn></MdLocationOn> {location || "Not Available"}
       </p>
       <p>
-        <a target="_blank" href={`${blog}`}> <MdLink></MdLink>{blog}</a>
+        <a target="_blank" href={`${blog}`}> <MdLink></MdLink>{blog || "Not Available"}</a>
       </p>
     </div>
   </Wrapper >;
@@ -39,15 +39,14 @@ const Card = () => {
 const Wrapper = styled.article`
   // padding: 1.5rem 2rem;
   position: relative;
-
   header {
     display: flex;
     column-gap: 1rem;
     margin-bottom: 1rem;
     img {
-      width: 160px;
-      height: 160px;
-      margin-right: 0.8rem;
+      width: 170px;
+      height: 170px;
+      //margin-right: 0.8rem;
       border-radius: 50%;
       border: 0px solid var(--accent);
     }

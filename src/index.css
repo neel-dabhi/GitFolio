@@ -14,6 +14,7 @@ Variables
 :root {
   /*--accent: #0336ff;*/
   --accent: #b07cee;
+  --error: #E53935;
   --orange: #f66a0a;
   --green: #28a745;
   --blue: #0070f3;

@@ -7,28 +7,21 @@ import {GithubContext} from '../context/context';
 const Search = () => {
     const [user, setUser] = React.useState('');
     const {requests, error, searchGithubUser, isLoading} = React.useContext(GithubContext);
+
     // get from global
     const
         handleSubmit = (e) => {
             e.preventDefault();
-            console.log(user);
             if (user) {
                 searchGithubUser(user);
             }
         };
     return <section className="section">
         <Wrapper className="section-center">
-            {error.show &&
-            <ErrorWrapper>
-                <p>
-                    {error.msg};
-                </p>
-            </ErrorWrapper>
-            }
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} autocomplete="on">
                 <div className="form-control">
                     <MdSearch></MdSearch>
-                    <input type='text' placeholder='Search for GitHub user' value={user}
+                    <input name="searchBarGitFolio" type='text' placeholder='Search for GitHub user' value={user}
                            onChange={event => setUser(event.target.value)}/>
                     {requests > 0 && !isLoading && (< button type={"submit"}>Search</button>)}
                 </div>
@@ -37,14 +30,21 @@ const Search = () => {
             <h3>
                 Request Quota : {requests} / 60
             </h3>
+            {error.show &&
+            <ErrorWrapper>
+                <p>
+                    {error.msg};
+                </p>
+            </ErrorWrapper>
+            }
 
         </Wrapper>
     </section>;
 };
 
 const Wrapper = styled.div`
-
                         position: relative;
+                        margin-top: 1.5rem;
                         display: grid;
                         gap: 1rem 1.75rem;
                         @media (min-width: 768px) {
@@ -67,11 +67,13 @@ const Wrapper = styled.div`
                         border-color: transparent;
                         outline-color: transparent;
                         letter-spacing: var(--spacing);
+                        font-size: 1rem;    
                         background:var(--darkGery);
                         color: var(--white);
                         padding: 0.25rem 0.5rem;
                         }
                         input:placeholder {
+             
                         color: var(--accent);
                         text-transform: capitalize;
                         letter-spacing: var(--spacing);
@@ -81,7 +83,7 @@ const Wrapper = styled.div`
                         }
                         button {
                         border-radius: var(--radius);
-                        border: 1.5px solid var(--accent);
+                        border: 1px solid var(--accent);
                         padding: 0.25rem 0.5rem;
                         text-transform: capitalize;
                         letter-spacing: var(--spacing);
@@ -100,7 +102,7 @@ const Wrapper = styled.div`
   input,
   button,
     svg {
-      font-size: 1rem;
+      font-size: 1.1rem;
                         }
                         @media (max-width: 800px) {
                         button,
@@ -113,6 +115,7 @@ const Wrapper = styled.div`
                         h3 {
                         margin-bottom: 0;
                         color: var(--accent);
+                        font-size: 1.2rem;
                         font-weight: 100;
                         }
                         `;
@@ -121,10 +124,10 @@ const ErrorWrapper = styled.article`
                         width: 90vw;
                         top: 0;
                         left: 0;
-                        transform: translateY(120%);
+                        transform: translateY(-70%);
                         text-transform: capitalize;
                         p {
-                        color: red;
+                        color: var(--error);
                         letter-spacing: var(--spacing);
                         }
                         `;

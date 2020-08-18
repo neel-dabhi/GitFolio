@@ -8,7 +8,7 @@ const Dashboard = () => {
 
     if (isLoading) {
         return <main>
-            {/*<Navbar></Navbar>*/}
+
             <ProgressBar/>
             <Search></Search>
             <Corner/>
@@ -20,7 +20,7 @@ const Dashboard = () => {
     }
     return (
         <main>
-            {/*<Navbar></Navbar>*/}
+            
             <Search></Search>
             <Corner/>
             <User></User>
