@@ -11,7 +11,7 @@ import FusionCharts from "fusioncharts";
 import Chart from "fusioncharts/fusioncharts.charts";
 
 // Include the theme as fusion
-import Theme from "fusioncharts/themes/fusioncharts.theme.fusion";
+import Theme from "fusioncharts/themes/fusioncharts.theme.candy";
 
 // Adding the chart and theme as dependency to the core fusioncharts
 ReactFC.fcRoot(FusionCharts, Chart, Theme);
@@ -27,7 +27,7 @@ const ChartComponent = ({ data }) => {
       // Chart Configuration
       chart: {
         caption: "Top Languages",
-        theme: "fusion",
+        theme: "candy",
         pieRadius: '45%',
 
       },

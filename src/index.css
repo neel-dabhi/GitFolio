@@ -12,6 +12,7 @@ Variables
 */
 
 :root {
+  --accent : #bb86fc;
   --orange: #f66a0a;
   --green: #28a745;
   --blue: #0070f3;
@@ -21,7 +22,8 @@ Variables
   --grey: #6a737d;
   --grey2: #586069;
   --black: #1A1E22;
-  --darkGrey: #24292e;
+  --darkGrey: #121212;
+  --cardSurface: #262A33;
   --white: #FFFFFF;
   /* dark shades of primary color*/
   --clr-primary-1: hsl(185, 91%, 17%);
@@ -79,7 +81,7 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background : var(--offWhite);
+  background : var(--darkGrey);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;

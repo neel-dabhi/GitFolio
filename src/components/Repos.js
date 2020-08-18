@@ -69,13 +69,16 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 1200px) {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 1fr;
   }
-
+  
   div {
+    border: 1.5px solid var(--accent);
+    border-radius: var(--radius);
     width: 100% !important;
   }
   .fusioncharts-container {
+     
     width: 100% !important;
   }
   svg {

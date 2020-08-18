@@ -71,9 +71,10 @@ const Wrapper = styled.section`
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
   .item {
+    border: 1.5px solid var(--accent);
     border-radius: var(--radius);
     padding: 1rem 2rem;
-    background: var(--clr-white);
+    background: var(--cardSurface);
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 3rem;
@@ -89,10 +90,12 @@ const Wrapper = styled.section`
       font-size: 1.5rem;
     }
     h3 {
+      color:white;
       margin-bottom: 0;
       letter-spacing: 0;
     }
     p {
+    color: var(--white);
       margin-bottom: 0;
       text-transform: capitalize;
     }

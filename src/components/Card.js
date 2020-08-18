@@ -48,19 +48,20 @@ const Wrapper = styled.article`
       width: 150px;
       height: 150px;
       margin-right: 0.8rem;
-      box-shadow: 0  5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2);
-      border-radius: 10%;
-      border: 0px solid var(--black);
+      border-radius: var(--radius);
+      border: 1.5px solid var(--accent);
     }
     h2 {
+      color: var(--white);
       margin - bottom: 0.25rem;
     }
     p {
+    
       display:flex;
       font-size: 1.3rem;
     }
     a {
-      color: var(--blue);
+      color: var(--accent);
       // color: var(--clr-primary-5);
       // border: 1px solid var(--clr-primary-5);
       // padding: 0.25rem 0.75rem;
@@ -78,10 +79,10 @@ const Wrapper = styled.article`
   .bio {
       display:flex;
       font-size: 1rem;
-      color: var(--clr-grey-3);
+      color: var(--white);
   }
   .links {
-    
+    font-size: 1rem;
     display: flex;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     @media (min-width: 640px) {
@@ -89,25 +90,22 @@ const Wrapper = styled.article`
     }
     column-gap: 3rem;
     align-items: center;
-
       p{
-        display: flex;
+      color: var(--white);
+       display: flex;
       },
       a {
-      margin - bottom: 0.25rem;
-      margin : 0.5rem;
+      margin -top : 1rem;
       svg {
-        color: var(--darkGrey);
-        margin - right: 0.5rem;
+        color: var(--accent);
         font-size: 1.7rem;
-        text-align : center;
       }
     }
     a {
       color: var(--clr-primary-5);
       transition: var(--transition);
       svg {
-      color: var(--darkGrey);
+      color: var(--accent);
       }
       &:hover {
       color: var(--clr-primary-3);
