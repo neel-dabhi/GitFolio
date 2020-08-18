@@ -1,5 +1,5 @@
 import React from 'react';
-import {Info, Repos, User, Search, Navbar, ProgressBar, Corner} from '../components';
+import {Info, Repos, User, Search, Navbar, ProgressBar, Corner, Footer} from '../components';
 import {GithubContext} from '../context/context';
 
 
@@ -15,6 +15,7 @@ const Dashboard = () => {
             <User></User>
             <Info></Info>
             <Repos></Repos>
+            <Footer></Footer>
         </main>
     }
     return (
@@ -25,6 +26,7 @@ const Dashboard = () => {
             <User></User>
             <Info></Info>
             <Repos></Repos>
+            <Footer></Footer>
         </main>
     );
 };
