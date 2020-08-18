@@ -34,11 +34,10 @@ const Card = () => {
         <a target="_blank" href={`${blog}`}> <MdLink></MdLink>{blog || "Not Available"}</a>
       </p>
     </div>
-  </Wrapper >;
+  </Wrapper>;
 };
 const Wrapper = styled.article`
   // padding: 1.5rem 2rem;
-  
   position: relative;
   header {
     display: flex;

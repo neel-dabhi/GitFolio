@@ -1,6 +1,7 @@
 import React from 'react';
-import {Info, Repos, User, Search, Navbar, ProgressBar, Corner, Footer} from '../components';
+import {Info, Repos, User, Search, Navbar, ProgressBar, Corner, Footer, GitHubCalendar} from '../components';
 import {GithubContext} from '../context/context';
+
 
 
 const Dashboard = () => {
@@ -25,6 +26,7 @@ const Dashboard = () => {
             <Corner/>
             <User></User>
             <Info></Info>
+            <GitHubCalendar username="neelkanthjdabhi"/>
             <Repos></Repos>
             <Footer></Footer>
         </main>
