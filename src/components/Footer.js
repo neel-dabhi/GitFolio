@@ -42,6 +42,12 @@ const Footer = () => (
             </a>
             and more!
         </div>
+        <div>
+            <span>Designed & Built by</span>
+            <a href="https://neelkanthjdabhi.github.io/" target="_blank" rel="noopener noreferrer">
+                Neelkanth J. Dabhi
+            </a>
+        </div>
     </StyledFooter>
 );
 
