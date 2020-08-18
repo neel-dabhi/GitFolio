@@ -48,13 +48,14 @@ const Wrapper = styled.article`
       width: 170px;
       height: 170px;
       //margin-right: 0.8rem;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
       border-radius: 50%;
-      border: 0px solid var(--accent);
+      border: 5px solid var(--accent);
     }
     h2 {
-
       color: var(--white);
       margin - bottom: 0.25rem;
+      margin-top: 0.25rem;
     }
     p {
     
