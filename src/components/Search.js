@@ -55,6 +55,7 @@ const Wrapper = styled.div`
                         }
                         }
                         .form-control {
+                        
                         border-radius: var(--radius);
                         border: 0px solid var(--accent);
                         background: var(--cardSurface);
@@ -64,6 +65,7 @@ const Wrapper = styled.div`
                         column-gap: 0.5rem;
                         padding: 0.5rem;
                         input {
+                        font-family: 'DM Sans', sans-serif;
                         border-color: transparent;
                         outline-color: transparent;
                         letter-spacing: var(--spacing);
@@ -73,7 +75,7 @@ const Wrapper = styled.div`
                         padding: 0.25rem 0.5rem;
                         }
                         input:placeholder {
-             
+                        font-family: 'DM Sans', sans-serif;
                         color: var(--accent);
                         text-transform: capitalize;
                         letter-spacing: var(--spacing);
@@ -82,6 +84,7 @@ const Wrapper = styled.div`
                         outline: none;
                         }
                         button {
+                        font-family: 'DM Sans', sans-serif;
                         border-radius: var(--radius);
                         border: 1px solid var(--accent);
                         padding: 0.25rem 0.5rem;
@@ -113,6 +116,7 @@ const Wrapper = styled.div`
                         }
                         }
                         h3 {
+                        font-family: 'DM Sans', sans-serif;
                         margin-bottom: 0;
                         color: var(--accent);
                         font-size: 1.2rem;
@@ -120,6 +124,7 @@ const Wrapper = styled.div`
                         }
                         `;
 const ErrorWrapper = styled.article`
+                        font-family: 'DM Sans', sans-serif;
                         position: absolute;
                         width: 90vw;
                         top: 0;
@@ -127,6 +132,7 @@ const ErrorWrapper = styled.article`
                         transform: translateY(-70%);
                         text-transform: capitalize;
                         p {
+                        font-family: 'DM Sans', sans-serif;
                         color: var(--error);
                         letter-spacing: var(--spacing);
                         }

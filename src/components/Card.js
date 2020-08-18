@@ -38,6 +38,7 @@ const Card = () => {
 };
 const Wrapper = styled.article`
   // padding: 1.5rem 2rem;
+  
   position: relative;
   header {
     display: flex;
@@ -51,6 +52,7 @@ const Wrapper = styled.article`
       border: 0px solid var(--accent);
     }
     h2 {
+
       color: var(--white);
       margin - bottom: 0.25rem;
     }
