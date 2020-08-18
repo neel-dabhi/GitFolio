@@ -12,7 +12,7 @@ const CornerStyles = styled.div`
     }
     svg {
       fill: var(--accent);
-      color:var(--white);
+      color:var(--darkGrey);
       .octo-arm {
         transform-origin: 130px 106px;
       }

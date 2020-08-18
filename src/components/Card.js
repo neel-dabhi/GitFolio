@@ -81,7 +81,7 @@ const Wrapper = styled.article`
       color: var(--white);
   }
   .links {
-    font-size: 1rem;
+    
     display: flex;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     @media (min-width: 640px) {
@@ -90,14 +90,17 @@ const Wrapper = styled.article`
     column-gap: 3rem;
     align-items: center;
       p{
-      color: var(--white);
+        color: var(--white);
        display: flex;
       },
       a {
       margin -top : 1rem;
+      display: flex;
+      align-items: center;
       svg {
         color: var(--accent);
-        font-size: 1.7rem;
+         margin-right: 0.5rem;
+        font-size: 1.5rem;
       }
     }
     a {
@@ -105,6 +108,8 @@ const Wrapper = styled.article`
       transition: var(--transition);
       svg {
       color: var(--accent);
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
       }
       &:hover {
       color: var(--clr-primary-3);

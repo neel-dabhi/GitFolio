@@ -26,6 +26,10 @@ const Footer = () => (
                 React.js
             </a>
             &middot;
+            <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer">
+                Vercel
+            </a>
+            &middot;
             <a href="https://www.fusioncharts.com/" target="_blank" rel="noopener noreferrer">
                 Fusion Charts
             </a>
