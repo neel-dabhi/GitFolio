@@ -57,7 +57,6 @@ const Wrapper = styled.article`
       margin-top: 0.25rem;
     }
     p {
-    
       display:flex;
       font-size: 1.3rem;
     }
@@ -79,7 +78,7 @@ const Wrapper = styled.article`
   }
   .bio {
       display:flex;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: var(--white);
   }
   .links {
