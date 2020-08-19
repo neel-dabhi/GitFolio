@@ -2,10 +2,7 @@
 
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/neelkanthjdabhi/GitFolio.svg">
-  
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/neelkanthjdabhi/GitFolio.svg">
- 
-  
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/neelkanthjdabhi/GitFolio.svg">  
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/neelkanthjdabhi/GitFolio.svg">
   <a href="https://github.com/neelkanthjdabhi/GitFolio/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/neelkanthjdabhi/GitFolio.svg">
@@ -17,10 +14,10 @@
 <p align="center">
  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
+  <a href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://git-folio.vercel.app/">View Live Demo</a>
 </p>
 
-[View Live Demo on Vercel](https://git-folio.vercel.app/)
 
 <h1 align="center">
     Your GitHub Portfolio! With charts!
