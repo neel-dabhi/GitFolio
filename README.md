@@ -1,15 +1,5 @@
 # GitFolio
 
-
-<h1 align="center">
-    <img alt="React GitHub Repo List" src="https://raw.githubusercontent.com/neelkanthjdabhi/GitFolio/master/og.png" />
-    <br>
-    Your GitHub Portfolio! With charts!
-</h1>
-
-<h4 align="center">
-  List your favorite GitHub repositories and see information and issues for each of them.
-</h4>
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/neelkanthjdabhi/GitFolio.svg">
   
@@ -31,6 +21,13 @@
 </p>
 
 [View Live Demo on Vercel](https://git-folio.vercel.app/)
+
+<h1 align="center">
+    Your GitHub Portfolio! With charts!
+    <br>
+    <img alt="React GitHub Repo List" src="https://raw.githubusercontent.com/neelkanthjdabhi/GitFolio/master/og.png" />
+</h1>
+
 
 ## :rocket: Technologies
 
