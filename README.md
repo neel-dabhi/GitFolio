@@ -41,7 +41,8 @@ This project was developed with the following technologies:
   
 ## :information_source: How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [npm v6.1][npm] or higher installed on your computer. From your command line:
+
 
 ```bash
 # Clone this repository
@@ -63,3 +64,9 @@ This project is under the MIT license. See the [LICENSE](https://github.com/neel
 ---
 
 Made with ♥ by Neelkanth Dabhi 👋🏼 [Get in touch!](https://www.linkedin.com/in/neelkanthjdabhi/)
+
+[nodejs]: https://nodejs.org/
+[npm]: https://yarnpkg.com/
+[vc]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
