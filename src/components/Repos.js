@@ -1,30 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GithubContext } from '../context/context';
-import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts';
-import { items } from 'fusioncharts';
+import {GithubContext} from '../context/context';
+import {Pie3D, Doughnut2D} from './Charts';
+
 const Repos = () => {
 
-  const chartData = [
-    {
-      label: "Venezuela",
-      value: "290"
-    },
-    {
-      label: "Saudi",
-      value: "260"
-    },
-    {
-      label: "Canada",
-      value: "180"
-    },
-  ];
-
-  const { repos } = React.useContext(GithubContext);
+  const {repos} = React.useContext(GithubContext);
 
   // Itrate repos
   let languages = repos.reduce((total, item) => {
-    const { language, stargazers_count } = item;
+    const {language, stargazers_count} = item;
 
     if (!language) return total;
 
@@ -52,7 +37,6 @@ const Repos = () => {
 
   return <section className="section">
     <Wrapper className="section-center">
-      {/* <ExampleChart data={chartData}></ExampleChart> */}
       <Pie3D data={mostUsed}></Pie3D>
       <Doughnut2D data={mostPopular}></Doughnut2D>
     </Wrapper>
