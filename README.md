@@ -1,36 +1,10 @@
 # GitFolio
 
-Your GitHub Portfolio! With charts!
 
-![demo](https://raw.githubusercontent.com/neelkanthjdabhi/GitFolio/master/og.png)
-
-Built with:
-
-- [React.js](https://reactjs.org/)
-- [Vercel](https://vercel.com/)
-- [Chart.js](https://www.chartjs.org/)
-- [Fusion Charts](https://www.fusioncharts.com/)
-- [GitHub REST API](https://docs.github.com/en/rest)
-- [Styled Components](https://www.styled-components.com/)
-
-## Getting Started
-
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Fire up the server and watch files
-
-   ```bash
-   npm run start
-   ```
-   
 <h1 align="center">
-    <img alt="React GitHub Repo List" src="https://res.cloudinary.com/lukemorales/image/upload/v1562170812/readme_logos/react-github-repo-list_gyiyf4.png" />
+    <img alt="React GitHub Repo List" src="https://raw.githubusercontent.com/neelkanthjdabhi/GitFolio/master/og.png" />
     <br>
-    React GitHub Repositories List
+    Your GitHub Portfolio! With charts!
 </h1>
 
 <h4 align="center">
