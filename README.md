@@ -19,7 +19,7 @@ Your GitHub Portfolio! With charts!
  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://git-folio.vercel.app/">View Live Demo</a>
+  <a href="https://git-folio.vercel.app/" target="_blank">View Live Demo</a>
 </p>
 
 
