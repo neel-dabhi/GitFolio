@@ -25,15 +25,14 @@
 </p>
 
 <p align="center">
-  <a href="#app-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
 
-![App Screenshot](https://raw.githubusercontent.com/neelkanthjdabhi/GitFolio/master/og.png)
-    [View Live Demo on Vercel](https://git-folio.vercel.app/)
+[View Live Demo on Vercel](https://git-folio.vercel.app/)
 
-## :app-technologies: Technologies
+## :rocket-technologies: Technologies
 
 This project was developed with the following technologies:
 
