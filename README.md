@@ -24,7 +24,7 @@ Your GitHub Portfolio! With charts!
 
 
 
-<img alt="React GitHub Repo List" src="https://raw.githubusercontent.com/neelkanthjdabhi/GitFolio/master/og.png" />
+<img alt="React GitHub Repo List" src="https://raw.githubusercontent.com/neelkanthjdabhi/GitFolio/master/demo.png" />
 
 
 
