@@ -1,5 +1,9 @@
 # GitFolio
 
+<h1 align="center">
+Your GitHub Portfolio! With charts!
+</h1>
+
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/neelkanthjdabhi/GitFolio.svg">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/neelkanthjdabhi/GitFolio.svg">  
@@ -19,11 +23,9 @@
 </p>
 
 
-<h1 align="center">
-    Your GitHub Portfolio! With charts!
-    <br>
-    <img alt="React GitHub Repo List" src="https://raw.githubusercontent.com/neelkanthjdabhi/GitFolio/master/og.png" />
-</h1>
+
+<img alt="React GitHub Repo List" src="https://raw.githubusercontent.com/neelkanthjdabhi/GitFolio/master/og.png" />
+
 
 
 ## :rocket: Technologies
