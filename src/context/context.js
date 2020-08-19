@@ -53,7 +53,7 @@ const GithubProvider = ({ children }) => {
 
     function toggleError(show = false, msg = '') {
         setError({show, msg});
-    };
+    }
 
     useEffect(checkRequests, []);
 
