@@ -62,10 +62,4 @@ This project is under the MIT license. See the [LICENSE](https://github.com/neel
 
 ---
 
-Made with ♥ by Neelkanth Dabhi :wave: [Get in touch!](https://www.linkedin.com/in/neelkanthjdabhi/)
-
-[nodejs]: https://nodejs.org/
-[yarn]: https://yarnpkg.com/
-[vc]: https://code.visualstudio.com/
-[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
-[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+Made with ♥ by Neelkanth Dabhi 👋🏼 [Get in touch!](https://www.linkedin.com/in/neelkanthjdabhi/)
