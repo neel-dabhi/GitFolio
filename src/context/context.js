@@ -16,7 +16,6 @@ const GithubProvider = ({ children }) => {
     const [requests, setRequests] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState({show: false, message: ""});
-    // check rate lim
 
     const searchGithubUser = async (user) => {
         toggleError(false, "");
