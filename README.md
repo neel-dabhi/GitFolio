@@ -1,5 +1,5 @@
 <p align="center"><img width=12.5% src="https://raw.githubusercontent.com/neelkanthjdabhi/GitFolio/master/public/logo512%20.png"></p>
-<p align="center"><h1>GitFolio</h1></p>
+<h1 align="center">GitFolio</h1>
 
 <h3 align="center">
 Your GitHub Portfolio! With charts!
