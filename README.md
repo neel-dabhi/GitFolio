@@ -1,4 +1,4 @@
-<p align="center"><img width=12.5% src="https://github.com/neelkanthjdabhi/GitFolio/blob/master/public/logo512.png"></p>
+<p align="center"><img width=12.5% src="https://raw.githubusercontent.com/neelkanthjdabhi/GitFolio/master/public/logo512%20.png"></p>
 <p align="center"><h1>GitFolio</h1></p>
 
 <h3 align="center">
