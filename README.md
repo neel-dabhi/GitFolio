@@ -59,7 +59,7 @@ $ npm install
 $ npm run start
 ```
 
-## You may also like...
+## :point_right: You may also like...
 
 - [Fire Blog](https://github.com/neelkanthjdabhi/Fire-Blog) - A Photo Blogging app, backed by firebase
 - [Directly](https://github.com/neelkanthjdabhi/Directly) - App that allows you to create shortcuts for everything.
