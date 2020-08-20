@@ -82,8 +82,7 @@ const Wrapper = styled.article`
       color: var(--white);
   }
   .links {
-    
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     @media (min-width: 640px) {
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

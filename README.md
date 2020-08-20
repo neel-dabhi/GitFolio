@@ -1,13 +1,15 @@
-# GitFolio
+<p align="center"><img width=12.5% src="https://github.com/neelkanthjdabhi/GitFolio/blob/master/public/logo512.png"></p>
+<p align="center"><h1>GitFolio</h1></p>
 
-<h1 align="center">
+<h3 align="center">
 Your GitHub Portfolio! With charts!
-</h1>
+</h3>
 
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/neelkanthjdabhi/GitFolio.svg">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/neelkanthjdabhi/GitFolio.svg">  
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/neelkanthjdabhi/GitFolio.svg">
+  <img alt="Contributions welcome" src="https://img.shields.io/badge/contributions-welcome-orange.svg">
   <a href="https://github.com/neelkanthjdabhi/GitFolio/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/neelkanthjdabhi/GitFolio.svg">
   </a>
@@ -34,7 +36,6 @@ This project was developed with the following technologies:
 
 - [React.js](https://reactjs.org/)
 - [Vercel](https://vercel.com/)
-- [Chart.js](https://www.chartjs.org/)
 - [Fusion Charts](https://www.fusioncharts.com/)
 - [GitHub REST API](https://docs.github.com/en/rest)
 - [Styled Components](https://www.styled-components.com/)
