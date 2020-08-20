@@ -59,12 +59,18 @@ $ npm install
 $ npm run start
 ```
 
+## You may also like...
+
+- [Fire Blog](https://github.com/neelkanthjdabhi/Fire-Blog) - A Photo Blogging app, backed by firebase
+- [Directly](https://github.com/neelkanthjdabhi/Directly) - App that allows you to create shortcuts for everything.
+
+
 ## :memo: License
 This project is under the MIT license. See the [LICENSE](https://github.com/neelkanthjdabhi/GitFolio/blob/master/LICENSE) for more information.
 
 ---
 
-Made with ♥ by Neelkanth Dabhi 👋🏼 [Get in touch!](https://www.linkedin.com/in/neelkanthjdabhi/)
+Made with ❤️ by Neelkanth Dabhi 👋🏼 [Get in touch!](https://www.linkedin.com/in/neelkanthjdabhi/)
 
 [nodejs]: https://nodejs.org/
 [npm]: https://yarnpkg.com/
