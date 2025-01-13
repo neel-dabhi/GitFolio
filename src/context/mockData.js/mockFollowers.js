@@ -1,4 +1,4 @@
-export default [
+const mockFollowers = [
   {
     login: 'rupam4',
     id: 17108594,
@@ -98,65 +98,7 @@ export default [
     received_events_url: 'https://api.github.com/users/dalinhuang99/received_events',
     type: 'User',
     site_admin: false
-  },
-  {
-    login: 'rushitbhadaniya',
-    id: 32771921,
-    node_id: 'MDQ6VXNlcjMyNzcxOTIx',
-    avatar_url: 'https://avatars3.githubusercontent.com/u/32771921?v=4',
-    gravatar_id: '',
-    url: 'https://api.github.com/users/rushitbhadaniya',
-    html_url: 'https://github.com/rushitbhadaniya',
-    followers_url: 'https://api.github.com/users/rushitbhadaniya/followers',
-    following_url: 'https://api.github.com/users/rushitbhadaniya/following{/other_user}',
-    gists_url: 'https://api.github.com/users/rushitbhadaniya/gists{/gist_id}',
-    starred_url: 'https://api.github.com/users/rushitbhadaniya/starred{/owner}{/repo}',
-    subscriptions_url: 'https://api.github.com/users/rushitbhadaniya/subscriptions',
-    organizations_url: 'https://api.github.com/users/rushitbhadaniya/orgs',
-    repos_url: 'https://api.github.com/users/rushitbhadaniya/repos',
-    events_url: 'https://api.github.com/users/rushitbhadaniya/events{/privacy}',
-    received_events_url: 'https://api.github.com/users/rushitbhadaniya/received_events',
-    type: 'User',
-    site_admin: false
-  },
-  {
-    login: 'raj1997',
-    id: 22416962,
-    node_id: 'MDQ6VXNlcjIyNDE2OTYy',
-    avatar_url: 'https://avatars2.githubusercontent.com/u/22416962?v=4',
-    gravatar_id: '',
-    url: 'https://api.github.com/users/raj1997',
-    html_url: 'https://github.com/raj1997',
-    followers_url: 'https://api.github.com/users/raj1997/followers',
-    following_url: 'https://api.github.com/users/raj1997/following{/other_user}',
-    gists_url: 'https://api.github.com/users/raj1997/gists{/gist_id}',
-    starred_url: 'https://api.github.com/users/raj1997/starred{/owner}{/repo}',
-    subscriptions_url: 'https://api.github.com/users/raj1997/subscriptions',
-    organizations_url: 'https://api.github.com/users/raj1997/orgs',
-    repos_url: 'https://api.github.com/users/raj1997/repos',
-    events_url: 'https://api.github.com/users/raj1997/events{/privacy}',
-    received_events_url: 'https://api.github.com/users/raj1997/received_events',
-    type: 'User',
-    site_admin: false
-  },
-  {
-    login: 'naushad-madakiya',
-    id: 8583183,
-    node_id: 'MDQ6VXNlcjg1ODMxODM=',
-    avatar_url: 'https://avatars0.githubusercontent.com/u/8583183?v=4',
-    gravatar_id: '',
-    url: 'https://api.github.com/users/naushad-madakiya',
-    html_url: 'https://github.com/naushad-madakiya',
-    followers_url: 'https://api.github.com/users/naushad-madakiya/followers',
-    following_url: 'https://api.github.com/users/naushad-madakiya/following{/other_user}',
-    gists_url: 'https://api.github.com/users/naushad-madakiya/gists{/gist_id}',
-    starred_url: 'https://api.github.com/users/naushad-madakiya/starred{/owner}{/repo}',
-    subscriptions_url: 'https://api.github.com/users/naushad-madakiya/subscriptions',
-    organizations_url: 'https://api.github.com/users/naushad-madakiya/orgs',
-    repos_url: 'https://api.github.com/users/naushad-madakiya/repos',
-    events_url: 'https://api.github.com/users/naushad-madakiya/events{/privacy}',
-    received_events_url: 'https://api.github.com/users/naushad-madakiya/received_events',
-    type: 'User',
-    site_admin: false
   }
 ];
+
+export default mockFollowers;
