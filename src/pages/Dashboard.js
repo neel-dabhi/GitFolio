@@ -1,34 +1,34 @@
 import React from 'react';
-import {Info, Repos, User, Search, Navbar, ProgressBar, Corner, Footer, GitHubCalendar} from '../components';
+import {Info, Repos, Search, ProgressBar, Corner, Footer, GitHubCalendarGrid} from '../components';
 import {GithubContext} from '../context/context';
 
-
-
 const Dashboard = () => {
-    const {isLoading} = React.useContext(GithubContext);
-
-    if (isLoading) {
-        return <main>
-
-            <ProgressBar/>
-            <Search></Search>
-            <Corner/>
-            <User></User>
-            <Info></Info>
-            <Repos></Repos>
-            <Footer></Footer>
-        </main>
+    // Move useContext to top level - before any conditional returns
+    const {isLoading, githubUser} = React.useContext(GithubContext);
+    
+    // Show loading state only when actually loading and no user data
+    if (isLoading && !githubUser) {
+        return (
+            <main>
+                <ProgressBar/>
+                <Search/>
+                <Corner/>
+                <div style={{textAlign: 'center', padding: '2rem', color: 'var(--text-secondary)'}}>
+                    Loading GitHub profile for neel-dabhi...
+                </div>
+            </main>
+        );
     }
+    
+    // Show main content when user data is available
     return (
         <main>
-            
-            <Search></Search>
+            <Search/>
             <Corner/>
-            <User></User>
-            <Info></Info>
-            <GitHubCalendar username="neelkanthjdabhi"/>
-            <Repos></Repos>
-            <Footer></Footer>
+            {githubUser && <Info/>}
+            {githubUser && <GitHubCalendarGrid/>}
+            {githubUser && <Repos/>}
+            <Footer/>
         </main>
     );
 };
