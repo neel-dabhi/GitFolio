@@ -210,47 +210,10 @@ const FormControl = styled.div`
     padding: var(--spacing-md);
     box-shadow: var(--shadow-sm);
     transition: var(--transition-normal);
-    position: relative;
-
-    /* Clean pulsing border animation */
-    &::before {
-        content: '';
-        position: absolute;
-        top: -3px;
-        left: -3px;
-        right: -3px;
-        bottom: -3px;
-        border: 2px solid var(--accent);
-        border-radius: var(--radius-lg);
-        opacity: 0;
-        transform: scale(1);
-        animation: cleanPulse 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-        pointer-events: none;
-    }
-
-    @keyframes cleanPulse {
-        0% {
-            transform: scale(1);
-            opacity: 0;
-        }
-        20% {
-            transform: scale(1.02);
-            opacity: 0.4;
-        }
-        100% {
-            transform: scale(1.04);
-            opacity: 0;
-        }
-    }
 
     &:focus-within {
         border-color: var(--accent);
         box-shadow: var(--shadow-md);
-        
-        /* Subtle enhanced pulse when focused */
-        &::before {
-            animation: cleanPulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-        }
     }
 
     input {
@@ -262,8 +225,6 @@ const FormControl = styled.div`
         font-size: 1rem;
         font-weight: var(--font-weight-normal);
         padding: var(--spacing-sm) 0;
-        position: relative;
-        z-index: 1;
 
         &::placeholder {
             color: var(--text-muted);
