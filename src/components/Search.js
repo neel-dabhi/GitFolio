@@ -210,10 +210,50 @@ const FormControl = styled.div`
     padding: var(--spacing-md);
     box-shadow: var(--shadow-sm);
     transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+
+    /* Subtle rippling animation to suggest action */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 2px solid transparent;
+        border-radius: var(--radius-lg);
+        background: linear-gradient(45deg, var(--accent), transparent, var(--accent));
+        background-size: 200% 200%;
+        animation: ripple 3s ease-in-out infinite;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    @keyframes ripple {
+        0% {
+            background-position: 0% 50%;
+            opacity: 0.1;
+        }
+        50% {
+            background-position: 100% 50%;
+            opacity: 0.3;
+        }
+        100% {
+            background-position: 0% 50%;
+            opacity: 0.1;
+        }
+    }
 
     &:focus-within {
         border-color: var(--accent);
         box-shadow: var(--shadow-md);
+        
+        /* Enhanced animation when focused */
+        &::before {
+            animation: ripple 2s ease-in-out infinite;
+            opacity: 0.5;
+        }
     }
 
     input {
@@ -225,6 +265,8 @@ const FormControl = styled.div`
         font-size: 1rem;
         font-weight: var(--font-weight-normal);
         padding: var(--spacing-sm) 0;
+        position: relative;
+        z-index: 1;
 
         &::placeholder {
             color: var(--text-muted);
