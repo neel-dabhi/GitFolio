@@ -136,7 +136,7 @@ const GitHubCalendarGrid = () => {
 
     // Get contribution color based on count - using improved GitHub-inspired palette
     const getContributionColor = (count) => {
-        if (count === 0) return '#e1e4e8';      // No contributions - light gray
+        if (count === 0) return '#696b6e';      // No contributions - light gray
         if (count <= 3) return '#c6e48b';       // 1-3 contributions - light green
         if (count <= 6) return '#7bc96f';       // 4-6 contributions - medium green
         if (count <= 9) return '#239a3b';       // 7-9 contributions - dark green
@@ -279,7 +279,7 @@ const GitHubCalendarGrid = () => {
                     
                     <Legend>
                         <LegendItem>
-                            <LegendBox color="#e1e4e8" />
+                            <LegendBox color="#696b6e" />
                             <span>Less</span>
                         </LegendItem>
                         <LegendItem>
