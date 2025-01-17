@@ -134,13 +134,13 @@ const GitHubCalendarGrid = () => {
     // Use mock data if no contributions are available
     const calendarData = contributions.length > 0 ? contributions : generateMockContributions();
 
-    // Get contribution color based on count - using GitHub's actual green palette
+    // Get contribution color based on count - using improved GitHub-inspired palette
     const getContributionColor = (count) => {
-        if (count === 0) return '#ebedf0';      // No contributions
-        if (count <= 3) return '#9be9a8';       // 1-3 contributions
-        if (count <= 6) return '#40c463';       // 4-6 contributions
-        if (count <= 9) return '#30a14e';       // 7-9 contributions
-        return '#216e39';                       // 10+ contributions
+        if (count === 0) return '#f6f8fa';      // No contributions - very light gray
+        if (count <= 3) return '#c6e48b';       // 1-3 contributions - light green
+        if (count <= 6) return '#7bc96f';       // 4-6 contributions - medium green
+        if (count <= 9) return '#239a3b';       // 7-9 contributions - dark green
+        return '#196127';                       // 10+ contributions - very dark green
     };
 
     // Calculate contribution statistics
@@ -279,11 +279,11 @@ const GitHubCalendarGrid = () => {
                     
                     <Legend>
                         <LegendItem>
-                            <LegendBox color="#ebedf0" />
+                            <LegendBox color="#f6f8fa" />
                             <span>Less</span>
                         </LegendItem>
                         <LegendItem>
-                            <LegendBox color="#216e39" />
+                            <LegendBox color="#196127" />
                             <span>More</span>
                         </LegendItem>
                     </Legend>
