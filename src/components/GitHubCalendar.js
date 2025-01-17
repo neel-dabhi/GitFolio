@@ -1,36 +1,100 @@
 import React, { useState, useEffect } from 'react';
 import {GithubContext} from "../context/context";
 import styled from "styled-components";
+import axios from 'axios';
 
 const GitHubCalendarGrid = () => {
-    const {githubUser} = React.useContext(GithubContext); // Moved to top level
+    const {githubUser} = React.useContext(GithubContext);
     const [contributions, setContributions] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [usingMockData, setUsingMockData] = useState(false);
 
-    // Fetch GitHub contributions data - moved useEffect to top level
+    // Fetch GitHub contributions data
     useEffect(() => {
         const fetchContributions = async () => {
             if (!githubUser) return;
             
             setLoading(true);
             setError(null);
+            setUsingMockData(false);
             
             try {
-                // Since we don't have a GitHub token, we'll use mock data
-                // This provides a consistent experience without API rate limits
-                setContributions([]); // Clear any previous data
-                setError("Using mock contribution data for demonstration");
+                // Try to fetch real contribution data using public REST API (no token needed)
+                // This uses the 60 requests/hour limit but provides real data
+                const endDate = new Date();
+                const startDate = new Date(endDate);
+                startDate.setDate(endDate.getDate() - 365); // Last 365 days
+
+                // Method 1: Try to get contribution data from public events API
+                const eventsResponse = await axios.get(
+                    `https://api.github.com/users/${githubUser.login}/events?per_page=100`
+                );
+
+                if (eventsResponse.data && eventsResponse.data.length > 0) {
+                    // Process events to create contribution data
+                    const contributionMap = new Map();
+                    
+                    eventsResponse.data.forEach(event => {
+                        const date = event.created_at.split('T')[0];
+                        if (contributionMap.has(date)) {
+                            contributionMap.set(date, contributionMap.get(date) + 1);
+                        } else {
+                            contributionMap.set(date, 1);
+                        }
+                    });
+
+                    // Convert to calendar format
+                    const weeks = [];
+                    let currentWeek = [];
+                    let currentDate = new Date(startDate);
+                    
+                    // Generate 53 weeks of data
+                    for (let weekIndex = 0; weekIndex < 53; weekIndex++) {
+                        currentWeek = [];
+                        
+                        for (let dayIndex = 0; dayIndex < 7; dayIndex++) {
+                            const dateStr = currentDate.toISOString().split('T')[0];
+                            const contributionCount = contributionMap.get(dateStr) || 0;
+                            
+                            currentWeek.push({
+                                date: dateStr,
+                                contributionCount: contributionCount,
+                                weekday: dayIndex
+                            });
+                            
+                            currentDate.setDate(currentDate.getDate() + 1);
+                        }
+                        
+                        weeks.push(currentWeek);
+                    }
+                    
+                    setContributions(weeks);
+                    setError(null);
+                    console.log('✅ Real GitHub contribution data loaded from public API');
+                } else {
+                    throw new Error('No event data available from GitHub API');
+                }
+                
             } catch (err) {
-                setError("Unable to load contributions. Using mock data.");
+                console.log('⚠️ Falling back to mock data:', err.message);
                 setContributions([]); // Clear any previous data
+                setUsingMockData(true);
+                
+                if (err.response && err.response.status === 403) {
+                    setError("GitHub API rate limit exceeded. Using mock data.");
+                } else if (err.response && err.response.status === 404) {
+                    setError("User not found or no public data available. Using mock data.");
+                } else {
+                    setError("Unable to fetch real contributions. Using mock data.");
+                }
             } finally {
                 setLoading(false);
             }
         };
 
         fetchContributions();
-    }, [githubUser]); // Dependency on githubUser
+    }, [githubUser]);
 
     // Generate mock contribution data for the last 365 days
     const generateMockContributions = () => {
@@ -157,6 +221,11 @@ const GitHubCalendarGrid = () => {
                         <h3>GitHub Contributions</h3>
                         {loading && <LoadingText>Loading contributions...</LoadingText>}
                         {error && <ErrorText>{error}</ErrorText>}
+                        {usingMockData && !loading && (
+                            <MockDataIndicator>
+                                📊 Showing mock data (GitHub API rate limit reached or data unavailable)
+                            </MockDataIndicator>
+                        )}
                     </CalendarHeader>
                     
                     <StatsContainer>
@@ -267,6 +336,17 @@ const ErrorText = styled.div`
     color: var(--error);
     font-size: 0.875rem;
     font-weight: var(--font-weight-medium);
+`;
+
+const MockDataIndicator = styled.div`
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-medium);
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: rgba(176, 124, 238, 0.05);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--cardBorder);
 `;
 
 const StatsContainer = styled.div`
