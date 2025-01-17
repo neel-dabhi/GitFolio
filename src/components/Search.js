@@ -211,34 +211,34 @@ const FormControl = styled.div`
     box-shadow: var(--shadow-sm);
     transition: var(--transition-normal);
     position: relative;
-    overflow: visible;
 
-    /* Subtle pulsing border animation that ripples outward */
+    /* Clean pulsing border animation */
     &::before {
         content: '';
         position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
         border: 2px solid var(--accent);
         border-radius: var(--radius-lg);
         opacity: 0;
-        animation: pulseRipple 2s ease-in-out infinite;
+        transform: scale(1);
+        animation: cleanPulse 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
         pointer-events: none;
     }
 
-    @keyframes pulseRipple {
+    @keyframes cleanPulse {
         0% {
             transform: scale(1);
-            opacity: 0.6;
+            opacity: 0;
         }
-        50% {
+        20% {
             transform: scale(1.02);
-            opacity: 0.3;
+            opacity: 0.4;
         }
         100% {
-            transform: scale(1.05);
+            transform: scale(1.04);
             opacity: 0;
         }
     }
@@ -247,9 +247,9 @@ const FormControl = styled.div`
         border-color: var(--accent);
         box-shadow: var(--shadow-md);
         
-        /* Enhanced pulsing when focused */
+        /* Subtle enhanced pulse when focused */
         &::before {
-            animation: pulseRipple 1.5s ease-in-out infinite;
+            animation: cleanPulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
         }
     }
 
