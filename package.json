@@ -2,6 +2,7 @@
   "name": "gitfolio",
   "version": "1.0.0",
   "private": true,
+  "homepage": ".",
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"

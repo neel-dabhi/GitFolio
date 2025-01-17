@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {GithubContext} from "../context/context";
 import styled from "styled-components";
-import axios from 'axios';
 
 const GitHubCalendarGrid = () => {
     const {githubUser} = React.useContext(GithubContext); // Moved to top level
