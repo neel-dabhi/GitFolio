@@ -211,37 +211,35 @@ const FormControl = styled.div`
     box-shadow: var(--shadow-sm);
     transition: var(--transition-normal);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 
-    /* Subtle rippling animation to suggest action */
+    /* Subtle pulsing border animation that ripples outward */
     &::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border: 2px solid transparent;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        border: 2px solid var(--accent);
         border-radius: var(--radius-lg);
-        background: linear-gradient(45deg, var(--accent), transparent, var(--accent));
-        background-size: 200% 200%;
-        animation: ripple 3s ease-in-out infinite;
-        opacity: 0.3;
+        opacity: 0;
+        animation: pulseRipple 2s ease-in-out infinite;
         pointer-events: none;
     }
 
-    @keyframes ripple {
+    @keyframes pulseRipple {
         0% {
-            background-position: 0% 50%;
-            opacity: 0.1;
+            transform: scale(1);
+            opacity: 0.6;
         }
         50% {
-            background-position: 100% 50%;
+            transform: scale(1.02);
             opacity: 0.3;
         }
         100% {
-            background-position: 0% 50%;
-            opacity: 0.1;
+            transform: scale(1.05);
+            opacity: 0;
         }
     }
 
@@ -249,10 +247,9 @@ const FormControl = styled.div`
         border-color: var(--accent);
         box-shadow: var(--shadow-md);
         
-        /* Enhanced animation when focused */
+        /* Enhanced pulsing when focused */
         &::before {
-            animation: ripple 2s ease-in-out infinite;
-            opacity: 0.5;
+            animation: pulseRipple 1.5s ease-in-out infinite;
         }
     }
 
