@@ -12,68 +12,19 @@ const GitHubCalendarGrid = () => {
     // Fetch GitHub contributions data - moved useEffect to top level
     useEffect(() => {
         const fetchContributions = async () => {
-            if (!githubUser || !githubUser.login) return;
-
+            if (!githubUser) return;
+            
             setLoading(true);
             setError(null);
+            
             try {
-                const endDate = new Date();
-                const startDate = new Date(endDate);
-                startDate.setDate(endDate.getDate() - 365); // Last 365 days
-
-                const from = startDate.toISOString().split('T')[0];
-                const to = endDate.toISOString().split('T')[0];
-
-                const response = await axios.post(
-                    'https://api.github.com/graphql',
-                    {
-                        query: `
-                            query($username: String!, $from: DateTime!, $to: DateTime!) {
-                                user(login: $username) {
-                                    contributionsCollection(from: $from, to: $to) {
-                                        contributionCalendar {
-                                            totalContributions
-                                            weeks {
-                                                contributionDays {
-                                                    contributionCount
-                                                    date
-                                                    weekday
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        `,
-                        variables: {
-                            username: githubUser.login,
-                            from: from,
-                            to: to,
-                        },
-                    },
-                    {
-                        headers: {
-                            Authorization: `bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
-                            'Content-Type': 'application/json',
-                        },
-                    }
-                );
-
-                if (response.data.data && response.data.data.user && response.data.data.user.contributionsCollection && response.data.data.user.contributionsCollection.contributionCalendar) {
-                    const calendar = response.data.data.user.contributionsCollection.contributionCalendar;
-                    setContributions(calendar.weeks);
-                } else {
-                    // Fallback to mock data if GraphQL fails or token is missing
-                    // Check if REST API user data is available, if so, use mock for calendar
-                    const restUserResponse = await axios.get(`https://api.github.com/users/${githubUser.login}`);
-                    if (restUserResponse.data) {
-                        setContributions([]); // Clear previous data
-                        setError("GitHub token required for detailed contributions. Using mock data.");
-                    }
-                }
+                // Since we don't have a GitHub token, we'll use mock data
+                // This provides a consistent experience without API rate limits
+                setContributions([]); // Clear any previous data
+                setError("Using mock contribution data for demonstration");
             } catch (err) {
-                setError("Unable to fetch contributions. Using mock data.");
-                setContributions([]); // Clear previous data
+                setError("Unable to load contributions. Using mock data.");
+                setContributions([]); // Clear any previous data
             } finally {
                 setLoading(false);
             }
