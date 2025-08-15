@@ -87,11 +87,11 @@ This project is under the MIT license. See the [LICENSE](https://github.com/neel
 
 ---
 
-Made with ❤️ by [Neelkanth Dabhi](https://portfolio-ashy-tau-38.vercel.app/) [Get in touch!](https://www.linkedin.com/in/neel-dabhi/)
+Made with ❤️ by [Neelkanth Dabhi](https://neeldabhi.vercel.app/)
 
 **Contact Information:**
 - **Email**: [neelkanth@dal.ca](mailto:neelkanth@dal.ca)
-- **Portfolio**: [https://portfolio-ashy-tau-38.vercel.app/](https://portfolio-ashy-tau-38.vercel.app/)
+- **Portfolio**: [https://neeldabhi.vercel.app/](https://neeldabhi.vercel.app/)
 - **LinkedIn**: [https://www.linkedin.com/in/neel-dabhi/](https://www.linkedin.com/in/neel-dabhi/)
 - **GitHub**: [https://github.com/neel-dabhi](https://github.com/neel-dabhi)
 
