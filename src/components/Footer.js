@@ -8,7 +8,7 @@ const Footer = () => {
     <StyledFooter>
       <FooterContent>
         <CopyrightText>
-          © {currentYear} <AuthorLink href="https://portfolio-ashy-tau-38.vercel.app/" target="_blank" rel="noopener noreferrer">Neelkanth Dabhi</AuthorLink>
+          © {currentYear} <AuthorLink href="https://neeldabhi.vercel.app/" target="_blank" rel="noopener noreferrer">Neelkanth Dabhi</AuthorLink>
         </CopyrightText>
         <GitHubLink 
           href="https://github.com/neel-dabhi/GitFolio" 
